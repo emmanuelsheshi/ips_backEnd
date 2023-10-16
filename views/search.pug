@@ -1,0 +1,38 @@
+extends layout
+block content
+    .main_content
+
+        div.form_container_login 
+
+            form.validated-form(action="/search", method="POST") 
+                div.content1 
+                
+                    br
+                    br
+
+                    label.label(for="search_key") Search Employee by
+                    br
+                    br
+                    select(name="search_by")
+                                option(value="first_name") first name
+                                option(value="surname") surname
+                                option(value="phone") phone number
+                                option(value="department") department
+                                option(value="account_number") account number
+                                option(value="section") section
+                                
+
+
+                    br
+                    br
+                    input.input.search(type="text" name="search_key" placeholder="name, surname , phone number or account number, department, section" required="required")
+                    br
+                    br
+
+                    button.submit search
+                    
+                
+            
+
+                    
+                    

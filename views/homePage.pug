@@ -1,0 +1,59 @@
+extends layout
+
+block content
+  .main_content
+    
+    .intro_homePage
+      
+      img(src="/images/userIcon.svg", alt="")      
+      p Welcome Dear  #{username} ,
+      br 
+      a(href="/logout" title="logout")
+        img(src="/images/logout.svg", alt="")
+     
+        
+        //- p what do you want to do today ? 
+    
+      
+    
+  .container  
+    .link_icon    
+      a(href="/add_user")
+        img(src="/images/users.svg", alt="add user icon") 
+      
+      p add employee
+    .link_icon 
+      a(href="/statistics")
+        img(src="/images/statistics.svg", alt="add user icon") 
+      
+      p statistics
+    .link_icon 
+     
+      a(href="/search_user")
+        img(src="/images/search.svg", alt="add user icon") 
+      
+      p search
+
+    .link_icon 
+     
+      a(href="/payslip")
+        img(src="/images/paymentslip.svg", alt="add user icon") 
+      
+      p payment slip
+
+    .link_icon 
+    
+      a(href="/payslip")
+        img(src="/images/paymentsummary.svg", alt="add user icon") 
+      
+      p payment summary
+  
+    .link_icon 
+  
+      a(href="/payslip")
+        img(src="/images/export.svg", alt="add user icon") 
+      
+      p export
+
+
+      

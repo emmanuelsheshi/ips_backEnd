@@ -1,0 +1,215 @@
+extends layout
+block content
+    div.form_container_add 
+        form.form(action="/new_user", method="POST", enctype="multipart/form-data") 
+            div.content1 
+                img(src="/images/1.svg", alt="" width="80px")
+
+                br
+                br
+                label.label(for="surname") Surname
+                br
+                br
+                input.input(type="text" name="surname" placeholder="surname" required="required")
+                br
+                br
+
+                label.label(for="surname") First Name
+                br
+                br
+                input.input(type="text" name="firstname" placeholder="firstname" required="required")
+                br
+                br
+           
+                label.label(for="phone") Phone Number
+                br
+                br
+                input.input(type="text" name="phone" placeholder="phone" required="required")
+                br
+                br         
+                label.label(for="address") Address
+                br
+                br
+                input.input(type="text" name="address" placeholder="address" required="required")
+
+       
+
+            div.content2
+                img(src="/images/2.svg", alt="" width="80px")
+                br
+
+                div.content2Flex
+                    div.section1
+                        label.label(for="employment_status") Employment status
+                        br
+                        br
+                        select(name="employment_status")
+                            option(value="permanent") PERMANENT
+                            option(value="temporary") TEMPORARY
+                            
+                        br
+                        br
+
+                
+                        label.label(for="department") Department
+                        br
+                        br
+                        select.department(name="department")
+                            option(value="police") POLICE 
+                            option(value="security") SECURITY
+                            option(value="essential") ESSENTIAL STAFF
+                            option(value="special equipment") SPECIAL EQUIPMENT
+                            option(value="production") PRODUCTION 
+                            option(value="construction") CONSTRUCTION 
+                            option(value="management") MANAGEMENT
+                        
+
+                        br
+                        br   
+
+                        label.label(for="section") Section
+                        br
+                        br
+                        select.sections(name="section")
+                            option(  value)   - Essential - 
+                            option(value="office cleaners") OFFICE CLEANERS 
+                            option(value="special equipment cleaners") SPECIAL EQUIPMENT CLEANERS
+                            option(value="drivers") DRIVERS
+                            option(value="nurses") NURSES
+                            option(value="cooks") COOKS
+                            option(value="secretaries") SECRETARIES
+                            
+
+                            option( disabled)   - SPECIAL EQUIPMENT PRODUCTION STAFF - 
+                            option(value="tailors") TAILORS
+                            option(value="quality control/cutting") QUALITY CONTROL/CUTTING 
+                            option(value="maintenance") MAINTENANCE
+                            option(value="helmet production") HELMET PRODUCTION 
+                            option(value="strike face production") STRIKE FACE PRODUCTION 
+                            option(value="cnc machine") CNC MACHINE
+                            option(value="dicon special equipment") DICON SPECIAL EQUIPMENT
+                            option(value="imperium special equipment") IMPERIUM SPECIAL EQUIPMENT
+                            option(value="special equipment admin") SPECIAL EQUIPMENT ADMIN
+
+                            
+                            option(  disabled)   - PRODUCTION STAFF - 
+
+                            option(value="welders") WELDERS
+                            option(value="mechanics") MECHANICS
+                            option(value="auto electrician") AUTO ELECTRICIAN
+                            option(value="interior and bulletproof glass department") INTERIOR / BULLETPROOF GLASS DEPARTMENT
+                            option(value="turners") TURNERS
+                            option(value="vulcanizer") VULCANIZER
+                            option(value="research and development") RESEARCH AND DEVELOPMENT
+                            option(value="electrical department") ELECTRICAL DEPARTMENT
+
+                            br
+
+                            option(  disabled)  - CONSTRUCTION SITE STAFF -
+                            
+                            option(value="principal officers and supervisors") PRINCIPAL OFFICERS/SUPERVISORS
+                            option(value="store manager") STORE MANAGER
+                            option(value="surveyor") SURVEYOR
+                            option(value="iron bender") IRON BENDER
+                            option(value="mason") MASON
+                            option(value="site labourers") SITE LABOURERS
+                            option(value="carpenters") CARPENTERS
+                            option(value="scafold") SCAFOLD
+                            option(value="aluminum dept") ALUMINUM DEPT
+                            option(value="site drivers ") SITE DRIVERS 
+                            option(value="site welders") SITE WELDERS
+                            option(value="plumber") PLUMBER 
+
+                            option( disabled) - DIRECTORS/MANAGEMENT -                            
+                            option(value="plumber") DIRECTORS/MANAGEMENT
+                            br
+                            br
+                               
+
+
+
+                        br
+                        br    
+                              
+                        label.label(for="job_description") Job Description
+                        br
+                        br
+                        textarea(name="text_area", cols="40", rows="1" placeholder="job description")
+
+                        br
+                        br         
+                              
+                        label.label(for="date") date of employment
+                          
+                     
+                        input(type="date", name="date")
+
+
+
+                    div.section2
+                        label.label(for="employment_status") Account Number
+                        br
+                        br
+                        input.input(type="text" name="account_number" placeholder="account_number" required="required")
+
+                        br
+                        br
+
+                        label.label(for="bank_name") Bank Name
+                        br
+                        br             
+                        select.bank_name(name="bank_name") Bank Name
+                            option(value="access") access 
+                            option(value="eco") ecobank
+                            option(value="fcmb") fcmb
+                            option(value="fidelity") fidelity
+                            option(value="first") first
+                            option(value="gtb") gtb
+                            option(value="jaiz") jaiz
+                            option(value="keystone") keystone
+                            option(value="polaris") polaris
+                            option(value="stanbic") stanbic
+                            option(value="sterling") sterling
+                            option(value="uba") uba
+                            option(value="union") union
+                            option(value="unity") unity
+                            option(value="wema") wema
+                            option(value="zenith") zenith                 
+                        br
+                        br         
+
+                        label.label(for="Bank Code") Bank Code
+                        br
+                        br
+                        input.input.bank_code(type="text" name="bank_code" placeholder="bank code" required="required")
+                        
+                        br
+                        br
+                
+                       
+                        label.label(for="gross_pay") Gross Pay
+                        br
+                        br
+                        input.input(type="number" name="gross_pay" placeholder="gross pay" required="required")
+                
+                button.submit submit
+
+
+
+
+            div.content3
+                img(src="/images/3.svg", alt="" width="80px")
+                br
+                label.label(for="upload") Upload
+                br
+                br
+                div.image_container
+                 img(src="", alt="")
+                 input.upload_btn(type="file" value="upload" name="upload")
+                //-  input.upload_btn(type="button", value="upload")
+        script(type='text/javascript', src='/javascripts/effizy2.js')    
+            
+        
+
+                   
+                   

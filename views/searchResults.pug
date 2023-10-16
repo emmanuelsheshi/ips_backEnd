@@ -1,0 +1,54 @@
+extends layout
+block content
+    .search_intro
+                p searched by :  #{search_by} , #{search_key}.
+        
+                p employees Found : #{totalSearches}
+
+
+    .main_content       
+        .search_main_container
+            each result in searchResults
+                .search_content
+                    .search_section2
+                            a(href=`${result.imageUrl}`)
+                                img.userImage(src=`${result.imageUrl}`)
+                    br
+                    br
+
+                    .search_section1
+                        .biodata
+                            label First Name : 
+                                b #{result.first_name.toUpperCase()}
+                            br
+                            label Surname : #{result.surname.toUpperCase()}
+                            br
+                            label Department : #{result.department}
+                            br
+                            label Section : #{result.section}
+                            br
+                            label Phone Number : #{result.phone}
+                            br
+                            label Gross Pay : &#8358; #{result.gross_pay}  
+                            br
+                            label Net Pay : &#8358; #{result.net_pay}
+                            br
+                            
+                            hr
+                            
+                            label Bonus : &#8358; #{result.bonus}
+                            br
+                            label Deductions : &#8358; #{result.penalty}
+
+
+                        
+                        .search_buttons
+                            a.links(href=`/update_user?firstName=${result.first_name}&surname=${result.surname}&grossPay=${result.gross_pay}&phoneNumber=${result.phone}&accountNumber=${result.account_number}&bankCode=${result.bank_code}&bankName=${result.bank_name}&address=${result.address}&section=${result.section}&job_description=${result.job_description}&department=${result.department}&status=${result.employment_status}`)
+                                button.update update
+                            
+                            a.links(href=`/delete_user?${result.first_name},${result.surname}`)
+                                button.delete delete
+                            
+                        a.links(href="#") reset user 
+                        br
+                    br
